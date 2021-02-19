@@ -12,11 +12,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 /*
-In this class, i keep my driver settings,using switch-case statement i can choose different browser
-Also i used Singleton design to create driver instance and it allows me to keep only one instance at a time.
-And we can implement parallel and cross browser settings adding by some additional settings
-For parallel testing we can add related url as a another case inside statement
-For cross browser testing we need to call a class that allows us to create multiple driver instances at a time.
+I have used Singleton Design Pattern to pass the same instance of my webdriver in one session
+Also, I keep my driver options,using switch-case statement i can choose different browser
  */
 
 

@@ -1,9 +1,6 @@
 package stepdefs;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import org.testng.Assert;
 import pages.MainPage;
 import pages.ResultPage;
@@ -32,7 +29,8 @@ public class StepDef {
     }
 
     @Then("{string} should be displayed on basket")
-    public void shouldBeDisplayedOnBasket(String booktitle) {
+    public void shouldBeDisplayedOnBasket(String booktitle) throws InterruptedException {
+        Thread.sleep(2000);
         Assert.assertEquals(mainPage.basketItemTitle.getText(),booktitle);
     }
 

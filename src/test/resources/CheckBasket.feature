@@ -7,3 +7,4 @@ Feature: Basket Functionality
     And I click "Do One Thing" title
     And I click add to basket button
     Then "Do One Thing" should be displayed on basket
+

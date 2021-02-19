@@ -9,15 +9,18 @@ import utilities.Driver;
 
 import java.util.concurrent.TimeUnit;
 
-// I keep my before and after annotations here and it allows me to handle in one place for common parts
-// Also , i have added some codes for taking screenshot if the scenario is failed. You can see it inside html reports
-//we can add rerun function as well.
+/* In Hooks class , there are block of codes that run before/after each scenario/test
+   In SetUp method ,I have added implicitly wait for not getting NoSuchElementException.It is applied to all webElements in my framework.
+   In tearDown method, I have used TakesScreenshot interface to get picture if the scenario is failed. It can be seen in html report
+ */
+
+
 public class Hooks {
 
     @Before
     public void setUp(){
         Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        Driver.get().manage().window().maximize();
+        Driver.get().manage().window().maximize(); // to make the screen size maximize
     }
 
     @After

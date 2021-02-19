@@ -5,7 +5,7 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 
-//
+
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -13,5 +13,5 @@ import org.junit.runner.RunWith;
         features = "@target/rerun.txt",
         glue = "/stepdefs"
 )
-public class FailedTestRunner {
+public class TestRunnerFailed {
 }
